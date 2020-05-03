@@ -18,24 +18,16 @@ public class BcmVistaMain extends JFrame {
     }
 
     private void genBCMBTMouseEntered(MouseEvent e) {
-        genBCMBT.setBackground(new Color(0, 75, 126, 60));
+        genBCMBT.setBackground(new Color(0, 62, 255, 255));
     }
 
     private void genBCMBTMouseExited(MouseEvent e) {
-        genBCMBT.setBackground(new Color(0, 75, 126));
-        genBCMBT.setForeground(Color.white);
-    }
-
-    private void genBCMBTMousePressed(MouseEvent e) {
-        // TODO add your code here
+        genBCMBT.setBackground(new Color(0, 25, 126));
     }
 
     private void genBCMBTMouseClicked(MouseEvent e) {
-        // TODO add your code here
-    }
-
-    private void genBCMBTMouseReleased(MouseEvent e) {
-        // TODO add your code here
+        genBCMBT.setBackground(new Color(16, 79, 20, 255));
+        genBCMBT.setBackground(new Color(0x000000));
     }
 
     private void initComponents() {
@@ -77,12 +69,12 @@ public class BcmVistaMain extends JFrame {
             nColumnasTF.setFont(new Font("Bahnschrift", Font.PLAIN, 18));
 
             //---- genBCMBT ----
-            genBCMBT.setText("Generar mapeado");
-            genBCMBT.setBackground(new Color(0, 75, 126));
-            genBCMBT.setForeground(Color.white);
-            genBCMBT.setBorder(new LineBorder(Color.black, 2));
+            genBCMBT.setText("Generar Mapeado");
             genBCMBT.setHorizontalTextPosition(SwingConstants.CENTER);
             genBCMBT.setFocusPainted(false);
+            genBCMBT.setBackground(new Color(0, 25, 126));
+            genBCMBT.setForeground(Color.white);
+            genBCMBT.setBorder(new LineBorder(Color.black, 2));
             genBCMBT.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
@@ -91,19 +83,10 @@ public class BcmVistaMain extends JFrame {
                 @Override
                 public void mouseEntered(MouseEvent e) {
                     genBCMBTMouseEntered(e);
-                    genBCMBTMouseEntered(e);
                 }
                 @Override
                 public void mouseExited(MouseEvent e) {
                     genBCMBTMouseExited(e);
-                }
-                @Override
-                public void mousePressed(MouseEvent e) {
-                    genBCMBTMousePressed(e);
-                }
-                @Override
-                public void mouseReleased(MouseEvent e) {
-                    genBCMBTMouseReleased(e);
                 }
             });
 
@@ -121,8 +104,8 @@ public class BcmVistaMain extends JFrame {
                         .addComponent(nColumnasLB)
                         .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(nColumnasTF, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
-                        .addComponent(genBCMBT, GroupLayout.PREFERRED_SIZE, 154, GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
+                        .addComponent(genBCMBT, GroupLayout.PREFERRED_SIZE, 138, GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())
             );
             pInicioPNLayout.setVerticalGroup(
@@ -135,8 +118,8 @@ public class BcmVistaMain extends JFrame {
                             .addComponent(nFilasTF, GroupLayout.PREFERRED_SIZE, 35, GroupLayout.PREFERRED_SIZE)
                             .addComponent(nColumnasLB)
                             .addComponent(nColumnasTF, GroupLayout.PREFERRED_SIZE, 35, GroupLayout.PREFERRED_SIZE)
-                            .addComponent(genBCMBT, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 16, Short.MAX_VALUE))
+                            .addComponent(genBCMBT, GroupLayout.PREFERRED_SIZE, 37, GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 14, Short.MAX_VALUE))
             );
         }
 
