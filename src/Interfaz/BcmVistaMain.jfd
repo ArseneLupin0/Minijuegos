@@ -4,8 +4,8 @@ new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-			"$horizontalGroup": "par l {comp panel1::l:::x}"
-			"$verticalGroup": "par l {seq l {comp panel1:::p::p, space ::184:x}}"
+			"$horizontalGroup": "par l {comp pInicioPN::l:::x}"
+			"$verticalGroup": "par l {seq l {comp pInicioPN:::p::p, space ::184:x}}"
 		} ) {
 			name: "this"
 			"$locationPolicy": 1
@@ -13,10 +13,10 @@ new FormModel {
 			"name": "bcmVentana"
 			"minimumSize": new java.awt.Dimension( 128, 128 )
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-				"$horizontalGroup": "par l {comp nombreLB::l::398:x, seq {space :::p, comp nFilasLB:::p::p, space :::p, comp nFilasTF:::p:46:p, space :::p, comp nColumnasLB:::p::p, space :::p, comp nColumnasTF:::p:46:p, space ::185:x}}"
-				"$verticalGroup": "par l {seq l {comp nombreLB:::::p, space :::p, par b {comp nFilasLB::b:p::p, comp nFilasTF::b:p::p, comp nColumnasLB::b:p::p, comp nColumnasTF::b:p::p}, space :0:22:x}}"
+				"$horizontalGroup": "par l {comp nombreLB::::398:x, seq {space :::p, comp nFilasLB:::p::p, space :::p, comp nFilasTF:::p:34:p, space :::p, comp nColumnasLB:::p::p, space :::p, comp nColumnasTF:::p:34:p, space ::49:x, comp genBCMBT:::p:154:p, space :::p}}"
+				"$verticalGroup": "par l {seq l {comp nombreLB:::::p, space :p:8:p, par b {comp nFilasLB::b:p::p, comp nFilasTF::b:p:35:p, comp nColumnasLB::b:p::p, comp nColumnasTF::b:p:35:p, comp genBCMBT::b:p:33:p}, space :0:16:x}}"
 			} ) {
-				name: "panel1"
+				name: "pInicioPN"
 				add( new FormComponent( "javax.swing.JLabel" ) {
 					name: "nombreLB"
 					"text": "Buscaminas"
@@ -44,6 +44,21 @@ new FormModel {
 					name: "nColumnasTF"
 					"font": #Font0
 				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "genBCMBT"
+					"text": "Generar mapeado"
+					"background": new java.awt.Color( 0, 75, 126, 255 )
+					"foreground": new java.awt.Color( 255, 255, 255, 255 )
+					"border": new javax.swing.border.LineBorder( sfield java.awt.Color black, 2, false )
+					"horizontalTextPosition": 0
+					"focusPainted": false
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseEntered", "genBCMBTMouseEntered", true ) )
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseExited", "genBCMBTMouseExited", true ) )
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "genBCMBTMousePressed", true ) )
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "genBCMBTMouseClicked", true ) )
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseReleased", "genBCMBTMouseReleased", true ) )
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseEntered", "genBCMBTMouseEntered", true ) )
+				} )
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
@@ -51,3 +66,4 @@ new FormModel {
 		} )
 	}
 }
+
