@@ -2,7 +2,7 @@
  * Created by JFormDesigner on Sun May 03 19:09:01 CEST 2020
  */
 
-package Interfaz;
+package Vista;
 
 import java.awt.event.*;
 import javax.swing.*;
@@ -14,28 +14,27 @@ import javax.swing.border.*;
  */
 public class BcmVistaMain extends JFrame {
     public BcmVistaMain() {
-        initComponents();
+        iniciarComponentes();
     }
 
-    private void genBCMBTMouseEntered(MouseEvent e) {
-        genBCMBT.setBackground(new Color(0, 62, 255, 255));
+    public JTextField getNFilasTF() {
+        return nFilasTF;
     }
 
-    private void genBCMBTMouseExited(MouseEvent e) {
-        genBCMBT.setBackground(new Color(0, 25, 126));
+    public JTextField getNColumnasTF() {
+        return nColumnasTF;
     }
 
-    private void genBCMBTMouseClicked(MouseEvent e) {
-        genBCMBT.setBackground(new Color(16, 79, 20, 255));
-        genBCMBT.setBackground(new Color(0x000000));
+    public JButton getGenBCMBT() {
+        return genBCMBT;
     }
 
-    private void initComponents() {
+    private void iniciarComponentes() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         pInicioPN = new JPanel();
-        nombreLB = new JLabel();
-        nFilasLB = new JLabel();
-        nColumnasLB = new JLabel();
+        var nombreLB = new JLabel();
+        var nFilasLB = new JLabel();
+        var nColumnasLB = new JLabel();
         nFilasTF = new JTextField();
         nColumnasTF = new JTextField();
         genBCMBT = new JButton();
@@ -44,6 +43,8 @@ public class BcmVistaMain extends JFrame {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setName("bcmVentana");
         setMinimumSize(new Dimension(128, 128));
+        setTitle("Buscaminas V-0.1");
+        setIconImage(new ImageIcon(getClass().getResource("/Vista/Imagenes/minaIcono.png")).getImage());
         var contentPane = getContentPane();
 
         //======== pInicioPN ========
@@ -75,20 +76,6 @@ public class BcmVistaMain extends JFrame {
             genBCMBT.setBackground(new Color(0, 25, 126));
             genBCMBT.setForeground(Color.white);
             genBCMBT.setBorder(new LineBorder(Color.black, 2));
-            genBCMBT.addMouseListener(new MouseAdapter() {
-                @Override
-                public void mouseClicked(MouseEvent e) {
-                    genBCMBTMouseClicked(e);
-                }
-                @Override
-                public void mouseEntered(MouseEvent e) {
-                    genBCMBTMouseEntered(e);
-                }
-                @Override
-                public void mouseExited(MouseEvent e) {
-                    genBCMBTMouseExited(e);
-                }
-            });
 
             GroupLayout pInicioPNLayout = new GroupLayout(pInicioPN);
             pInicioPN.setLayout(pInicioPNLayout);
@@ -142,9 +129,6 @@ public class BcmVistaMain extends JFrame {
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
     private JPanel pInicioPN;
-    private JLabel nombreLB;
-    private JLabel nFilasLB;
-    private JLabel nColumnasLB;
     private JTextField nFilasTF;
     private JTextField nColumnasTF;
     private JButton genBCMBT;

@@ -12,6 +12,8 @@ new FormModel {
 			"defaultCloseOperation": 3
 			"name": "bcmVentana"
 			"minimumSize": new java.awt.Dimension( 128, 128 )
+			"title": "Buscaminas V-0.1"
+			"iconImage": new com.jformdesigner.model.SwingIcon( 0, "/Vista/Imagenes/minaIcono.png" )
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
 				"$horizontalGroup": "par l {comp nombreLB::::398:x, seq {space :::p, comp nFilasLB:::p::p, space :::p, comp nFilasTF:::p:34:p, space :::p, comp nColumnasLB:::p::p, space :::p, comp nColumnasTF:::p:34:p, space ::65:x, comp genBCMBT:::p:138:p, space :::p}}"
 				"$verticalGroup": "par l {seq l {comp nombreLB:::::p, space :p:8:p, par b {comp nFilasLB::b:p::p, comp nFilasTF::b:p:35:p, comp nColumnasLB::b:p::p, comp nColumnasTF::b:p:35:p, comp genBCMBT::b:p:37:p}, space :0:14:x}}"
@@ -26,23 +28,36 @@ new FormModel {
 					"foreground": new java.awt.Color( 248, 93, 93, 255 )
 					auxiliary() {
 						"JavaCodeGenerator.variableName": "nombreLB"
+						"JavaCodeGenerator.variableLocal": true
 					}
 				} )
 				add( new FormComponent( "javax.swing.JLabel" ) {
 					name: "nFilasLB"
 					"text": "nFilas:"
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
 				} )
 				add( new FormComponent( "javax.swing.JLabel" ) {
 					name: "nColumnasLB"
 					"text": "nColumnas:"
+					auxiliary() {
+						"JavaCodeGenerator.variableLocal": true
+					}
 				} )
 				add( new FormComponent( "javax.swing.JTextField" ) {
 					name: "nFilasTF"
 					"font": &Font0 new java.awt.Font( "Bahnschrift", 0, 18 )
+					auxiliary() {
+						"JavaCodeGenerator.variableGetter": true
+					}
 				} )
 				add( new FormComponent( "javax.swing.JTextField" ) {
 					name: "nColumnasTF"
 					"font": #Font0
+					auxiliary() {
+						"JavaCodeGenerator.variableGetter": true
+					}
 				} )
 				add( new FormComponent( "javax.swing.JButton" ) {
 					name: "genBCMBT"
@@ -52,9 +67,9 @@ new FormModel {
 					"background": new java.awt.Color( 0, 25, 126, 255 )
 					"foreground": new java.awt.Color( 255, 255, 255, 255 )
 					"border": new javax.swing.border.LineBorder( sfield java.awt.Color black, 2, false )
-					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseEntered", "genBCMBTMouseEntered", true ) )
-					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseExited", "genBCMBTMouseExited", true ) )
-					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "genBCMBTMouseClicked", true ) )
+					auxiliary() {
+						"JavaCodeGenerator.variableGetter": true
+					}
 				} )
 			} )
 		}, new FormLayoutConstraints( null ) {
