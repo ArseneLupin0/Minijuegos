@@ -4,7 +4,6 @@
 
 package Vista;
 
-import java.awt.event.*;
 import javax.swing.*;
 import java.awt.*;
 import javax.swing.border.*;
@@ -44,7 +43,6 @@ public class BcmVistaMain extends JFrame {
         setName("bcmVentana");
         setMinimumSize(new Dimension(128, 128));
         setTitle("Buscaminas V-0.1");
-        setIconImage(new ImageIcon(getClass().getResource("/Vista/Imagenes/minaIcono.png")).getImage());
         var contentPane = getContentPane();
 
         //======== pInicioPN ========
