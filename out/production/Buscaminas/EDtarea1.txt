@@ -1,0 +1,22 @@
+El tiempo que nos queda lo vamos a dedicar a ED. Teníamos propuestos 4 ejercicios y os propuse empezar por el de
+buscaminas que parecía más lúdico. En la plataforma Moodle además de los enunciados y la entrada para colocar los
+proyectos os he puesto como material de consulta:
+
+la lista de requerimientos que hicimos en clase para el Buscaminas, el proyecto con las clases de ejemplo para el
+proyecto Calendario, el proyecto con las clases para apoyarnos en ellas para hacer la interfaz gráfica del Sudoku y
+además los ficheros con apuntes que ya os di en clase: ED3.pdf para depuración y prueba, diagramasDeClases.doc,
+Capitulo22-Deitel.pdf y Capítulo13-Deitel.pdf para UML.
+
+Es fundamental que no planteeis estos ejercicios en un único fichero "monolítico": se trata de problemas complicados
+que os van a generar un código "monstruoso". Por supuesto tendréis que separar la parte del modelo (datos), de la
+vista(interfaz) y el controlador (o negocio).
+
+A los que os resulten demasiado complicados estos programas debéis intentar abordarlos por partes. Por ejemplo para el
+buscaminas podríamos empezar por hacer una clase que gestione un array de 5 columnas y 5 filas (nuestro primer nivel) y
+que se limite a colocar las 9 minas en casillas diferentes (no puede haber dos minas en la misma casilla).
+
+Para ver lo que está haciendo puedes diseñar un método que permita ver lo que hay dentro, o usar el depurador...
+Esta podría ser la PRIMERA TAREA para todos; me la mandáis al correo como máximo el viernes próximo (1-Mayo).
+Los que vayáis más adelantados me mandáis lo que tengáis. Sólo corregiré lo que me mandéis al correo.
+
+Saludos

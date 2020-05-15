@@ -4,16 +4,15 @@ new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-			"$horizontalGroup": "par l {comp pInicioPN::l:::x}"
-			"$verticalGroup": "par l {seq l {comp pInicioPN:::p::p, space ::184:x}}"
+			"$horizontalGroup": "par l {comp pInicioPN:::::x, comp pJuego::t:::x}"
+			"$verticalGroup": "par l {seq l {comp pInicioPN:::p::p, space :::p, comp pJuego:::::x}}"
 		} ) {
 			name: "this"
 			"$locationPolicy": 1
 			"defaultCloseOperation": 3
 			"name": "bcmVentana"
 			"minimumSize": new java.awt.Dimension( 128, 128 )
-			"title": "Buscaminas V-0.1"
-			"iconImage": new com.jformdesigner.model.SwingIcon( 0, "src/Vista/Imagenes/minaIcono.png" )
+			"title": "Buscaminas V-0.2"
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
 				"$horizontalGroup": "par l {comp nombreLB::::398:x, seq {space :::p, comp nFilasLB:::p::p, space :::p, comp nFilasTF:::p:34:p, space :::p, comp nColumnasLB:::p::p, space :::p, comp nColumnasTF:::p:34:p, space ::65:x, comp genBCMBT:::p:138:p, space :::p}}"
 				"$verticalGroup": "par l {seq l {comp nombreLB:::::p, space :p:8:p, par b {comp nFilasLB::b:p::p, comp nFilasTF::b:p:35:p, comp nColumnasLB::b:p::p, comp nColumnasTF::b:p:35:p, comp genBCMBT::b:p:37:p}, space :0:14:x}}"
@@ -48,6 +47,8 @@ new FormModel {
 				add( new FormComponent( "javax.swing.JTextField" ) {
 					name: "nFilasTF"
 					"font": &Font0 new java.awt.Font( "Bahnschrift", 0, 18 )
+					"text": "5"
+					"editable": false
 					auxiliary() {
 						"JavaCodeGenerator.variableGetter": true
 					}
@@ -55,6 +56,8 @@ new FormModel {
 				add( new FormComponent( "javax.swing.JTextField" ) {
 					name: "nColumnasTF"
 					"font": #Font0
+					"text": "5"
+					"editable": false
 					auxiliary() {
 						"JavaCodeGenerator.variableGetter": true
 					}
@@ -71,6 +74,15 @@ new FormModel {
 						"JavaCodeGenerator.variableGetter": true
 					}
 				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {space :0:398:x}"
+				"$verticalGroup": "par l {space :0:178:x}"
+			} ) {
+				name: "pJuego"
+				auxiliary() {
+					"JavaCodeGenerator.variableGetter": true
+				}
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )

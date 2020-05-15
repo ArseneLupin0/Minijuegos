@@ -1,0 +1,28 @@
+Para la SEGUNDA TAREA (a entregar como máximo el jueves próximo: 7-Mayo) podemos completar nuestra clase "modelo"
+que gestiona los datos de nuestro tablero poniendo un constructor que permita pasarle los datos del nivel con el que
+queramos trabajar:
+
+- 5*5 9 minas
+- 8*8 27 minas
+- 12*12 81 minas
+
+y que los almacene como datos de nuestra clase.
+
+Adaptaremos lo hecho en la primera tarea (colocar las minas en nuestro tablero sin que  vaya más de una en una casilla
+y el método que permitía ver el contenido de nuestro array).
+
+Haremos un método que permita calcular para cada casilla libre del tablero el número de minas vecinas
+(puede ser de 0 a 8).
+
+Haremos un método que pasándole las coordenadas de una casilla nos devuelva su contenido (si las coordenadas
+soncorrectas dirá si es mina o cuántas minas tiene de vecinas).
+
+Haremos un formulario que se apoyará en los datos que tenemos en nuestro "modelo": tendrá un comboBox con nuestros
+tres niveles de dificultad. Cuando elijamos uno de ellos se desplegará nuestro tablero de botones o cajas de texto
+(lo que queráis) con el contenido de nuestro "modelo". Os podéis imaginar que el siguiente paso para la próxima tarea
+será darle funcionalidad a esos botones o cajas de texto.
+
+Los que vayáis más adelantados me mandáis lo que tengáis. 
+Sólo corregiré lo que me mandéis al correo.
+
+Saludos
